@@ -43,7 +43,7 @@
     <!-- Section = Lista de vinhos -->
     <div class="container-fluid text-center">
         <section>
-            <p class="h4" style="background-color:#ffffff">Detalhes do vinho selecionado</p>
+            <p class="h4" style="background-color:#ffffff">Adicionar um novo vinho a adega...</p>
             <br>
         </section>
     </div>
@@ -54,62 +54,96 @@
             <div class="col-sm-6">
                 <div class="row">
                     <label for="nome" class="col-sm-4 form-label">Vinho :</label>
-                    <input type="text" id="nome" disabled class="form-control col-sm-6">{{ vinho.nome }}
+                    <input type="text" id="nome" class="form-control col-sm-6">
                 </div><br>
                 <div class="row">
                     <label for="uvas" class="col-sm-4 form-label">Uva(s) :</label>
-                    <input type="text" id="uvas" disabled class="form-control col-sm-6">{{ vinho.uvas }}
+                    <select id="uvas" class="form-select">
+                        <option selected>Selecione a(s) Uva(s)</option>
+                        <option value="CAB">Cabernet Sauvignon</option>
+                        <option value="CAF">Cabernet Franc</option>
+                        <option value="MER">Merlot</option>
+                        <option value="MLB">Malbec</option>
+                        <option value="TAN">Tannat</option>
+                        <option value="PIN">Pinot Noir</option>
+                        <option value="CHA">Chardonnay</option>
+                        <option value="RIE">Riesling</option>
+                    </select>
                 </div><br>
                 <div class="row">
                     <label for="tipo" class="col-sm-4 form-label">Tipo :</label>
-                    <input type="text" id="tipo" disabled class="form-control col-sm-6">{{ vinho.tipo }}
+                    <select id="tipo" class="form-select">
+                        <option selected>Selecione o tipo do vinho</option>
+                        <option value="TIN">Tinto</option>
+                        <option value="ROS">Rosè</option>
+                        <option value="BRA">Branco</option>
+                    </select>
                 </div><br>
                 <div class="row">
                     <label for="nacionalidade" class="col-sm-4 form-label">Origem :</label>
-                    <input type="text" id="nacionalidade"  disabled class="form-control col-sm-6">{{ vinho.nacionalidade }}
+                    <select id="nacionalidade" class="form-select">
+                        <option selected>Selecione a nacionalidade</option>
+                        <option value="BRA">Brasil</option>
+                        <option value="ARG">Argentina</option>
+                        <option value="URU">Uruguai</option>
+                        <option value="PAR">Paraguai</option>
+                        <option value="CHI">Chile</option>
+                        <option value="POR">Portugal</option>
+                        <option value="ESP">Espanha</option>
+                        <option value="FRA">França</option>
+                        <option value="ITA">Itália</option>
+                        <option value="AFS">África do Sul</option>
+                        <option value="EUA">Estados Unidos</option>
+                        <option value="AUS">Austrália</option>
+                    </select>
                 </div><br>
                 <div class="row">
                     <label for="safra" class="col-sm-4 form-label">Safra :</label>
-                    <input type="text" id="safra" disabled class="form-control col-sm-6">{{ vinho.safra }}
+                    <input type="number" id="safra" class="form-control col-sm-6" value="2018">
                 </div><br>
                 <div class="row">
                     <label for="vinicola" class="col-sm-4 form-label">Vinícola :</label>
-                    <input type="text" id="vinicola" disabled class="form-control col-sm-6">{{ vinho.vinicola }}
+                    <input type="text" id="vinicola" class="form-control col-sm-6">
                 </div><br>
                 <div class="row">
                     <label for="reserva" class="col-sm-4 form-label">Reserva :</label>
-                    <input type="text" id="reserva" disabled class="form-control col-sm-6">{{ vinho.reserva }}
+                    <select id="reserva" class="form-select">
+                        <option selected>reserva?</option>
+                        <option value="GRN">Gran Reserva</option>
+                        <option value="RES">Reserva</option>
+                        <option value="NRS">Não Reservado</option>
+                    </select>
                 </div><br>
                 <div class="row">
                     <label for="alcool" class="col-sm-4 form-label">Teor Alcoólico :</label>
-                    <input type="text" id="alcool" disabled class="form-control col-sm-6">{{ vinho.alcool }}
+                    <input type="number" id="alcool" class="form-control col-sm-4" value="13" step="0.5">%
                 </div><br>
 
             </div>
             <div class="col-sm-6">
                 <div class="row">
                     <label for="temperatura" class="col-sm-4 form-label">Temperatura :</label>
-                    <input type="text" id="temperatura" disabled class="form-control col-sm-6">{{ vinho.temperatura }}
+                    <input type="number" id="temperatura" class="form-control col-sm-4" value="18" step="0.5">°C
                 </div><br>
                 <div class="row">
                     <label for="amadurecimento" class="col-sm-4 form-label">Amadurecimento :</label>
-                    <input type="text" id="amadurecimento" disabled class="form-control col-sm-6">{{ vinho.amadurecimento }}
+                    <input type="text" id="amadurecimento" class="form-control col-sm-6">
                 </div><br>
                 <div class="row">
                     <label for="guarda" class="col-sm-4 form-label">Guarda :</label>
-                    <input type="text" id="guarda" disabled class="form-control col-sm-6">{{ vinho.guarda }}
+                    <input type="text" id="guarda" class="form-control col-sm-6">
                 </div><br>
                 <div class="row">
                     <label for="visual" class="col-sm-4 form-label">Visual :</label>
-                    <input type="text" id="visual" disabled class="form-control col-sm-6">{{ vinho.visual }}
+                    <input type="text" id="visual" class="form-control col-sm-6">
                 </div><br>
                 <div class="row">
                     <label for="olfativo" class="form-label col-sm-4">Olfativo :</label>
-                    <textarea id="olfativo" disabled class="form-control col-sm-6" rows="4">{{ vinho.olfativo }}</textarea>
+                    <textarea id="olfativo" class="form-control col-sm-6" rows="4"></textarea>
                 </div><br>
                 <div class="row">
                     <label for="gustativo" class="form-label col-sm-4">Gustativo :</label>
-                    <textarea id="gustativo" disabled class="form-control col-sm-6" rows="4">{{ vinho.gustativo }}</textarea>
+                    <textarea id="gustativo" class="form-control col-sm-6" rows="4"></textarea>
                 </div><br>
             </div>
         </div>

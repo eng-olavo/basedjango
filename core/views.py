@@ -26,4 +26,8 @@ def signin(request):
     return render(request, 'signin.html')
 
 
+def adicionar(request):
+    return render(request, 'adicionar.html')
+
+
 
