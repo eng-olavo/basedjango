@@ -1,7 +1,7 @@
 {% load bootstrap4 %}
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
 
@@ -16,8 +16,6 @@
     <title>Index</title>
 </head>
 <body>
-
-
     <!-- Header -->
     <div class="container-fluid">
         <header>
@@ -37,13 +35,19 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Lista</a>
+                        <a class="nav-link" href="{% url 'lista' %}">Lista</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contato</a>
+                        <a class="nav-link" href="{% url 'contato' %}">Contato</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
+                        <a class="nav-link" href="{% url 'detalhes' %}">Detalhes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'signin' %}">Sign in</a>
                     </li>
                 </ul>
             </div>
@@ -115,7 +119,7 @@
         </section>
     </div>
 
-<!-- Section = Título (Destaques)-->
+    <!-- Section = Título (Destaques)-->
     <div class="container-fluid text-center">
         <section>
             <br>
@@ -180,21 +184,14 @@
         </section>
     </div>
 
-
     <!-- Footer -->
-    <footer>
-        <div class="container-fluid text-center">
+    <div class="container-fluid text-center">
+        <footer>
             <br>
             <p class="h6"><i>Desenvolvido por: kWp.....Copyright 2021</i></p>
             <br>
-        </div>
-
-
-    </footer>
-
-
-
-
+        </footer>
+    </div>
 
     <!-- Option 1: Bootstrap Bundle with Popper
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
